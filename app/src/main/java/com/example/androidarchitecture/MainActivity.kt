@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("TAG", "onCreate Activity")
 
         // ViewModel Provider
-        viewModel= ViewModelProvider(this)[MainViewModel::class.java]
+        viewModel= ViewModelProvider(this, MainViewModelFactory(10))[MainViewModel::class.java]
 
         val click = findViewById<Button>(R.id.button)
         click.setOnClickListener(View.OnClickListener {
