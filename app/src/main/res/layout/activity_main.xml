@@ -1,26 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/textView"
-        android:text="0"
-        android:layout_centerInParent="true"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/textView"
-        android:text="Button"
-        android:layout_marginTop="10sp"
-        android:id="@+id/button"
-        android:onClick="clickButton"
-        android:layout_height="wrap_content"/>
-</RelativeLayout>
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/back_ground"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="QUOTIFY"
+            android:id="@+id/textView"
+            android:textAlignment="center"
+            android:textColor="#e7e7e7"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/card_back"
+            android:orientation="vertical"
+            android:id="@+id/kkkk"
+            android:paddingStart="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="40dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleX="-1"
+                android:scaleY="-1"
+                app:tint="#454545"
+                android:src="@drawable/ic_baseline_format_quote_24" />
+
+            <TextView
+                android:id="@+id/quoteText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:text="Genius is one percent inspiration and ninety-nine percent perspiration."
+                android:textColor="#454545"
+                android:textSize="24sp"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/quoteAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="10dp"
+                android:text="Bruce Wayne"
+                android:textColor="#454545"
+                android:textSize="20sp"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/liveData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kkkk"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="90dp"
+            android:text="Live Data" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:layout_marginLeft="15dp"
+                android:text="Presvious"
+                android:drawableTint="#80FFFFFF"
+                android:id="@+id/previousButton"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                app:drawableLeftCompat="@drawable/ic_baseline_chevron_left_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/nextButton"
+                android:layout_marginEnd="15dp"
+                android:text="Next"
+                android:textColor="@color/black"
+                android:textAlignment="textEnd"
+                android:textSize="30sp"
+                app:drawableEndCompat="@drawable/ic_baseline_chevron_right_24"
+                app:drawableTint="#80FFFFFF" />
+        </LinearLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:foregroundTint="#FFF"
+            app:backgroundTint="#454545"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/ic_baseline_share_24" />
+    </RelativeLayout>
+</layout>

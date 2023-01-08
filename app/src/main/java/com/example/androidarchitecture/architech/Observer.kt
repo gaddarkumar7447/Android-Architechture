@@ -1,4 +1,4 @@
-package com.example.androidarchitecture
+package com.example.androidarchitecture.architech
 
 import android.util.Log
 import androidx.lifecycle.DefaultLifecycleObserver
