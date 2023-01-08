@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.androidarchitecture.DataBinding.MainDataBinding
 import com.example.androidarchitecture.LiveData.MainLiveData
 import com.example.androidarchitecture.databinding.ActivityMainBinding
 
@@ -71,6 +72,9 @@ class MainActivity : AppCompatActivity() {
         dataSave()*/
     }
 
+    fun dataBindingFun(view: View) {
+        startActivity(Intent(this, MainDataBinding::class.java))
+    }
 
 
     /*private fun dataSave(){

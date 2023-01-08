@@ -51,7 +51,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="10dp"
-                android:text="Genius is one percent inspiration and ninety-nine percent perspiration."
+                android:text="Genius is one percent inspiration
+                and ninety-nine percent perspiration."
                 android:textColor="#454545"
                 android:textSize="24sp"
                 tools:ignore="RtlSymmetry" />
@@ -76,6 +77,14 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="90dp"
             android:text="Live Data" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:text="DataBinding"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/liveData"
+            android:onClick="dataBindingFun"
+            android:layout_height="wrap_content"/>
 
         <LinearLayout
             android:layout_width="match_parent"
